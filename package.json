@@ -1,0 +1,16 @@
+{
+  "name": "fxbossspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Page de vente FX Boss Space (site statique)",
+  "scripts": {
+    "build": "node build.js",
+    "start": "node build.js && serve dist -l ${PORT:-3000}"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

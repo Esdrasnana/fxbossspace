@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FX Boss Space – Formation Forex</title>
+<meta name="description" content="La formation Forex complète avec mentorat : stratégies, gestion du risque et psychologie du trading.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,800;1,800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --noir:#111;
+    --noir-2:#1b1b1b;
+    --blanc:#fff;
+    --gris-fond:#f4f5f7;
+    --texte:#222;
+    --texte-doux:#555;
+    --vert:#2ecc40;
+    --vert-fonce:#1fa52f;
+    --bleu:#1a73e8;
+    --rouge:#e53935;
+    --or:#f5b301;
+    --bordure:#e2e4e8;
+    --max:900px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Open Sans",Arial,sans-serif;color:var(--texte);background:var(--blanc);line-height:1.65;font-size:17px}
+  img{max-width:100%;display:block}
+  h1,h2,h3{font-family:Montserrat,Arial,sans-serif;line-height:1.25;margin:0 0 .6em}
+  p{margin:0 0 1em}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+  section{padding:56px 0}
+  .fond-gris{background:var(--gris-fond)}
+  .fond-noir{background:var(--noir) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 40L40 0' stroke='%23222' stroke-width='1'/%3E%3C/svg%3E");color:var(--blanc)}
+
+  /* Titres de section façon page de vente */
+  .titre-section{font-size:clamp(1.5rem,4vw,2.1rem);text-align:center;text-decoration:underline;text-underline-offset:6px;display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap}
+  .titre-section::before{content:"";width:22px;height:30px;background:var(--bleu);clip-path:polygon(0 0,100% 0,100% 100%,50% 75%,0 100%);flex:none}
+  .centre{text-align:center}
+  .gras{font-weight:700}
+  .vert{color:var(--vert)}
+  .petit{font-size:.85rem;color:var(--texte-doux)}
+
+  /* HERO */
+  .hero{padding:48px 0 40px}
+  .hero h1{font-style:italic;font-weight:800;text-align:center;text-decoration:underline;text-underline-offset:8px;font-size:clamp(1.6rem,5vw,2.6rem)}
+  .puces{list-style:none;padding:0;margin:28px 0}
+  .puces li{position:relative;padding-left:32px;margin-bottom:14px}
+  .puces li::before{content:"➜";position:absolute;left:0;top:0;width:22px;height:22px;border-radius:50%;background:var(--vert);color:var(--noir);font-size:.75rem;display:grid;place-items:center;font-weight:700;margin-top:3px}
+  .accroche-verte{color:var(--vert);font-family:Montserrat,sans-serif;font-style:italic;font-weight:800;text-align:center;font-size:clamp(1.05rem,3vw,1.4rem);margin:0}
+
+  /* Listes questions / numéros */
+  .questions p{font-size:1.1rem;font-weight:600;border-left:4px solid var(--bleu);padding-left:14px}
+  .numeros{list-style:none;padding:0;counter-reset:n}
+  .numeros li{counter-increment:n;padding:14px 16px 14px 60px;position:relative;background:var(--blanc);border:1px solid var(--bordure);border-radius:8px;margin-bottom:10px;font-weight:600}
+  .numeros li::before{content:counter(n);position:absolute;left:14px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;background:var(--bleu);color:#fff;display:grid;place-items:center;font-family:Montserrat,sans-serif}
+
+  /* Boutons */
+  .cta{display:block;width:100%;max-width:640px;margin:28px auto 0;padding:18px 20px;border-radius:8px;background:linear-gradient(180deg,var(--vert),var(--vert-fonce));color:#fff;text-align:center;font-family:Montserrat,sans-serif;font-weight:800;font-size:clamp(1rem,2.6vw,1.2rem);text-decoration:none;box-shadow:0 4px 0 #157a22;transition:transform .1s}
+  .cta:hover{transform:translateY(-2px)}
+  .cta:active{transform:translateY(2px);box-shadow:0 2px 0 #157a22}
+
+  /* Emplacements à remplir */
+  .a-remplir{border:3px dashed var(--or);background:#fff8e1;color:#6b4e00;padding:18px;border-radius:8px;margin:18px 0;font-size:.95rem}
+  .a-remplir::before{content:"⚠️ À REMPLIR — ";font-weight:700}
+  .a-remplir.image{min-height:220px;display:grid;place-items:center;text-align:center}
+
+  /* Piliers */
+  .piliers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:24px 0}
+  .pilier{background:var(--blanc);border:1px solid var(--bordure);border-top:5px solid var(--vert);border-radius:8px;padding:20px}
+  .pilier h3{font-size:1.05rem}
+
+  /* Avertissements */
+  .avert{font-size:.82rem;color:var(--texte-doux);background:var(--gris-fond);border-left:4px solid var(--texte-doux);padding:12px 14px;margin:18px 0}
+  .fond-gris .avert{background:var(--blanc)}
+
+  /* Témoignages */
+  .grille-temoignages{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .grille-temoignages .a-remplir{margin:0}
+
+  /* Modules */
+  .modules{display:grid;gap:14px}
+  .module{background:var(--blanc);border:1px solid var(--bordure);border-radius:8px;overflow:hidden}
+  .module summary{cursor:pointer;list-style:none;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:Montserrat,sans-serif;font-weight:800}
+  .module summary::-webkit-details-marker{display:none}
+  .module summary .valeur{color:var(--vert-fonce);font-size:.9rem;white-space:nowrap}
+  .module summary::after{content:"+";font-size:1.4rem;color:var(--bleu);flex:none}
+  .module[open] summary::after{content:"–"}
+  .module .contenu{padding:0 18px 16px;border-top:1px solid var(--bordure)}
+  .module .contenu h4{margin:14px 0 6px}
+  .module ul{margin:0;padding-left:20px}
+
+  /* Bonus */
+  .bonus{display:grid;gap:22px}
+  .bonus-carte{background:var(--blanc);border:1px solid var(--bordure);border-radius:10px;padding:24px}
+  .bonus-carte h3{color:var(--bleu)}
+
+  /* Garantie */
+  .garantie{border:4px solid var(--vert);border-radius:14px;padding:28px;background:var(--blanc);text-align:center}
+  .badge-garantie{width:130px;height:130px;margin:0 auto 18px;border-radius:50%;background:radial-gradient(circle,var(--or) 0 58%,#c98f00 59% 64%,var(--or) 65%);display:grid;place-items:center;color:#3a2a00;font-family:Montserrat,sans-serif;font-weight:800;line-height:1.05;font-size:.9rem}
+  .badge-garantie strong{font-size:2.1rem;display:block}
+  .garantie .maj{text-transform:uppercase;font-weight:700}
+
+  /* Offres */
+  .offres{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;align-items:start}
+  .offre{background:var(--blanc);color:var(--texte);border-radius:12px;padding:26px 22px;position:relative;border:3px solid var(--bordure)}
+  .offre.top{border-color:var(--vert)}
+  .etiquette{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--vert);color:#fff;font-weight:700;font-size:.8rem;padding:4px 14px;border-radius:20px;white-space:nowrap;text-transform:uppercase}
+  .offre.alt .etiquette{background:var(--bleu)}
+  .offre h3{text-align:center;margin-top:6px}
+  .prix-barre{text-align:center;text-decoration:line-through;color:var(--rouge);font-weight:700}
+  .prix{text-align:center;font-family:Montserrat,sans-serif;font-weight:800;font-size:2.3rem;margin:0}
+  .sous-prix{text-align:center;color:var(--texte-doux);font-size:.9rem}
+  .offre ul{list-style:none;padding:0;margin:16px 0;font-size:.95rem}
+  .offre li{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px dashed var(--bordure)}
+  .offre li span:last-child{color:var(--texte-doux);white-space:nowrap}
+  .offre .sous-titre{font-weight:700;margin:14px 0 4px;color:var(--rouge);text-transform:uppercase;font-size:.85rem}
+  .offre .total{font-weight:700;text-align:center;margin-top:10px}
+  .offre .cta{margin-top:16px}
+
+  /* FAQ */
+  .faq details{border:1px solid var(--bordure);border-radius:8px;margin-bottom:10px;background:var(--blanc)}
+  .faq summary{cursor:pointer;padding:16px 18px;font-weight:700;text-transform:uppercase;font-size:.95rem}
+  .faq details p{padding:0 18px 4px}
+
+  /* Problèmes */
+  .problemes{list-style:none;padding:0}
+  .problemes li{padding:10px 0;border-bottom:1px solid var(--bordure)}
+  .problemes li::before{content:"❌ "}
+
+  /* Deux choix */
+  .choix{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:24px 0}
+  .choix > div{border-radius:10px;padding:20px;border:2px solid}
+  .choix .c1{border-color:var(--rouge);background:#fdecec}
+  .choix .c2{border-color:var(--vert);background:#eafbe9}
+  .choix h3{font-size:1.1rem}
+
+  .alerte{color:var(--rouge);font-weight:800;text-align:center;text-transform:uppercase;margin:26px 0 0;font-size:.95rem}
+
+  /* Signature */
+  .signature{font-family:Montserrat,sans-serif;font-weight:600}
+
+  /* Pied de page */
+  footer{background:var(--noir-2);color:#bbb;font-size:.8rem;padding:40px 0}
+  footer h4{color:#fff;margin:18px 0 6px;font-size:.9rem}
+  footer a{color:#ddd}
+  .liens-legaux{display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center;margin-top:24px}
+</style>
+</head>
+<body>
+
+<!-- =====================================================================
+     CONFIG : modifie ici le nom, les prix, les liens et l'e-mail.
+     Ces valeurs remplissent automatiquement tous les [data-cfg] de la page.
+     ===================================================================== -->
+<script>
+  const CONFIG = {
+    marque: "FX Boss Space",
+    programme: "l'Académie FX Boss",
+    mentor: "[Ton prénom]",
+    methode: "Méthode Triple Pilier",
+    devise: "€",
+    prixUnique: 997,
+    mensualite: 197,
+    nbMensualites: 6,
+    valeurTotale: 10958,
+    lienPaiementUnique: "#offre",   // ← colle ici ton lien de paiement (paiement unique)
+    lienPaiementPlusieurs: "#offre", // ← colle ici ton lien de paiement (plusieurs fois)
+    emailSupport: "support@fxbossspace.com", // ← ton vrai e-mail
+    annee: new Date().getFullYear()
+  };
+</script>
+
+<!-- ============ HERO ============ -->
+<header class="fond-noir hero">
+  <div class="wrap">
+    <h1>La dernière formation Forex dont tu auras besoin, ou tu es remboursé…</h1>
+    <ul class="puces">
+      <li>Découvre les stratégies et techniques précises qui m'ont permis, à moi et à de nombreux traders comme toi, de viser la liberté financière et la liberté de vivre comme on l'entend.</li>
+      <li>Découvre la <span data-cfg="methode"></span> : le système exact que j'utilise mois après mois sur les marchés.</li>
+      <li>Suis un parcours clair, étape par étape, vers un trading rentable (on l'appelle ta « carte au trésor »).</li>
+      <li>L'une des rares formations avec une garantie satisfait ou remboursé de 30 jours, sans justification.</li>
+    </ul>
+    <p class="accroche-verte">(Sérieusement : si tu veux devenir un trader rentable, lis la suite.)</p>
+  </div>
+</header>
+
+<!-- ============ POUR QUI ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="titre-section">À qui s'adresse <span data-cfg="programme"></span> ?</h2>
+    <div class="questions">
+      <p>Tu pars de zéro et tu veux un chemin clair et éprouvé vers un trading rentable ?</p>
+      <p>Tu perds de l'argent en ce moment et tu cherches une méthode structurée pour « arrêter l'hémorragie » et enfin progresser ?</p>
+      <p>Tu rêves de devenir ton propre patron et de remplacer ton job de 9 h à 17 h par une carrière de trader ?</p>
+      <p>Tu veux créer une deuxième source de revenus, accessible n'importe quand et depuis n'importe où dans le monde ?</p>
+    </div>
+    <p class="centre gras">Si tu as répondu « oui » à au moins une de ces questions, continue ta lecture…</p>
+  </div>
+</section>
+
+<!-- ============ IMAGINE ============ -->
+<section class="fond-gris">
+  <div class="wrap">
+    <h2 class="titre-section">Imagine un instant…</h2>
+    <p class="centre">Qu'est-ce que tu ressentirais si c'était ta réalité ?</p>
+    <ol class="numeros">
+      <li>Tu es ton propre patron et tu travailles (ou pas) quand tu le décides.</li>
+      <li>Tu génères un revenu à temps plein depuis ton ordinateur, depuis la destination de tes rêves.</li>
+      <li>Tu es un trader régulièrement rentable et tu peux montrer à ceux qui doutaient de toi que tu as réussi ta transition.</li>
+      <li>Tu vis une vie de liberté, financière et personnelle.</li>
+    </ol>
+    <p>Le trading m'a permis d'atteindre chacun de ces objectifs.</p>
+    <p>Si tu lis ces lignes, je veux te montrer exactement comment je suis passé de <span class="gras">[ton ancien métier]</span> à trader à plein temps. Et je veux t'apprendre à faire pareil.</p>
+    <p>Si ça te parle, clique sur le bouton ci-dessous pour réserver ta place dans <span data-cfg="programme"></span>. Ou continue ta lecture pour découvrir comment j'y suis arrivé, et comment tu peux y arriver aussi…</p>
+    <a class="cta" href="#offre">Je réserve ma place dans <span data-cfg="programme"></span></a>
+  </div>
+</section>
+
+<!-- ============ MON HISTOIRE ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="titre-section">Mon histoire (fais connaissance avec ton mentor)</h2>
+    <div class="a-remplir image">Ta photo (portrait ou photo devant tes écrans)</div>
+    <p>Si tu ne me connais pas encore, je m'appelle <span class="gras" data-cfg="mentor"></span> et je suis le fondateur de <span data-cfg="marque"></span>.</p>
+    <div class="a-remplir">Ton parcours : depuis combien de temps tu trades, combien de personnes tu accompagnes, ce que tu faisais avant le trading (métier, salaire, ce qui ne te convenait pas).</div>
+    <h3>C'est comme ça que j'ai découvert le Forex…</h3>
+    <div class="a-remplir">Tes débuts : combien de temps tu as perdu de l'argent, les stratégies essayées, le(s) compte(s) cramé(s), le moment où tu as failli abandonner… puis le déclic.</div>
+    <p>Ce que j'ai fini par comprendre tient en <span class="gras">3 piliers simples</span> :</p>
+    <div class="piliers">
+      <div class="pilier"><h3>1. Une stratégie qui te donne un avantage</h3><p>Un ensemble de règles clair, testé, qui te dit quand entrer et quand sortir.</p></div>
+      <div class="pilier"><h3>2. Une vraie gestion du risque</h3><p>Protéger ton capital avant de chercher à le faire grossir.</p></div>
+      <div class="pilier"><h3>3. Un mental solide</h3><p>Garder la tête froide et suivre ton plan, même quand le marché te teste.</p></div>
+    </div>
+    <p>En appliquant ces 3 piliers, mon trading a complètement changé. Un premier mois positif, puis un autre, puis encore un autre…</p>
+    <p>Je peux te le dire par expérience : ce sont les trois fondations de la réussite de n'importe quel trader. Et dans <span data-cfg="programme"></span>, je m'assure que tu maîtrises chacune d'elles.</p>
+    <a class="cta" href="#offre">Je réserve ma place dans <span data-cfg="programme"></span></a>
+  </div>
+</section>
+
+<!-- ============ RÉSULTATS ============ -->
+<section class="fond-gris">
+  <div class="wrap">
+    <h2 class="titre-section">Mes résultats vérifiés par un tiers</h2>
+    <div class="avert"><strong>Avertissement :</strong> les performances présentées ne sont pas représentatives. Le trading comporte un risque très élevé et demande beaucoup de temps à maîtriser. Si tu ne comprends pas ces risques, ou que tu ne comprends pas que ces résultats ne constituent en aucun cas une garantie, ne poursuis pas la lecture de cette page.</div>
+    <div class="a-remplir image">Capture de tes résultats vérifiés (Myfxbook, FX Blue…) : compte réel, période, pourcentage</div>
+    <div class="a-remplir">Ton texte : rendement obtenu, sur quelle période, nombre moyen de trades par semaine, et ce que ça t'a apporté en temps libre.</div>
+    <p>C'est exactement ce que je veux t'apprendre. Et de nombreux traders, partis du même point que toi, utilisent déjà ce qu'ils ont appris pour améliorer nettement leur trading.</p>
+  </div>
+</section>
+
+<!-- ============ TÉMOIGNAGES ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="titre-section">Commentaires et témoignages d'élèves</h2>
+    <div class="a-remplir">Témoignage mis en avant : prénom de l'élève, son point de départ, son résultat (ex. sa première journée à X €) et la stratégie du cours qu'il a utilisée. Avec son accord écrit.</div>
+    <div class="a-remplir image">Capture du résultat de cet élève</div>
+    <div class="avert">Les résultats peuvent varier et les témoignages ne prétendent pas représenter des résultats typiques. Ils illustrent ce qu'ont accompli les élèves les plus motivés et ne doivent pas être considérés comme des résultats moyens.</div>
+    <h3 class="centre">Encore plus de commentaires d'élèves…</h3>
+    <div class="grille-temoignages">
+      <div class="a-remplir image">Capture témoignage 1</div>
+      <div class="a-remplir image">Capture témoignage 2</div>
+      <div class="a-remplir image">Capture témoignage 3</div>
+    </div>
+    <a class="cta" href="#offre">Je réserve ma place dans <span data-cfg="programme"></span></a>
+  </div>
+</section>
+
+<!-- ============ CE QUI EST INCLUS ============ -->
+<section class="fond-gris">
+  <div class="wrap">
+    <h2 class="titre-section">Ce qui est inclus : accès immédiat à…</h2>
+    <p class="centre petit">Clique sur un module pour voir le détail des leçons.</p>
+    <div class="modules">
+      <details class="module"><summary>Formation Les Bases <span class="valeur">(valeur 497 €)</span></summary><div class="contenu"><h4>Maîtrise les fondamentaux</h4><ul><li>Comment fonctionne le marché des changes</li><li>Paires, pips, lots et effet de levier</li><li>Choisir son courtier et sa plateforme</li><li>Les types d'ordres</li></ul></div></details>
+      <details class="module"><summary>Psychologie du trading <span class="valeur">(valeur 997 €)</span></summary><div class="contenu"><h4>Maîtrise ton mental</h4><ul><li>Gérer la peur et l'avidité</li><li>Accepter les pertes</li><li>Discipline et routine du trader</li><li>Éviter le sur-trading</li></ul></div></details>
+      <details class="module"><summary>Analyse technique <span class="valeur">(valeur 997 €)</span></summary><div class="contenu"><h4>Maîtrise l'analyse technique</h4><ul><li>Supports et résistances</li><li>Structure de marché et tendances</li><li>Chandeliers japonais</li><li>Analyse multi-unités de temps</li></ul></div></details>
+      <details class="module"><summary>Stratégies éprouvées <span class="valeur">(valeur 1 497 €)</span></summary><div class="contenu"><h4>Maîtrise des stratégies testées</h4><ul><li>[Stratégie 1]</li><li>[Stratégie 2]</li><li>[Stratégie 3]</li><li>Règles d'entrée, de stop et d'objectif</li></ul></div></details>
+      <details class="module"><summary>Backtesting <span class="valeur">(valeur 497 €)</span></summary><div class="contenu"><h4>Maîtrise le backtesting</h4><ul><li>Pourquoi tester avant de risquer de l'argent réel</li><li>Méthode de backtest pas à pas</li><li>Tenir et analyser son journal</li></ul></div></details>
+      <details class="module"><summary>Gestion du risque <span class="valeur">(valeur 997 €)</span></summary><div class="contenu"><h4>Maîtrise ton risque</h4><ul><li>Taille de position</li><li>Ratio risque / rendement</li><li>Règles de perte maximale</li><li>Protéger et faire croître son capital</li></ul></div></details>
+      <details class="module"><summary>Stratégies avancées <span class="valeur">(valeur 997 €)</span></summary><div class="contenu"><h4>Trading discrétionnaire</h4><ul><li>Lire le contexte de marché</li><li>Combiner plusieurs confluences</li><li>Adapter sa gestion en cours de trade</li></ul></div></details>
+      <details class="module"><summary>Le coffre-fort à stratégies <span class="valeur">(valeur 997 €)</span></summary><div class="contenu"><h4>Encore plus de stratégies pro</h4><ul><li>[Liste des stratégies bonus]</li></ul></div></details>
+      <details class="module"><summary>Plan de trading <span class="valeur">(valeur 497 €)</span></summary><div class="contenu"><h4>Je te révèle mon vrai plan de trading, à copier</h4><ul><li>Construire ton plan</li><li>Ta routine quotidienne et hebdomadaire</li><li>Suivre et améliorer tes performances</li></ul></div></details>
+    </div>
+    <div class="a-remplir">Vérifie que ces 9 modules et leurs leçons correspondent bien à ce que tu livres. Remplace ou supprime ce qui ne correspond pas.</div>
+  </div>
+</section>
+
+<!-- ============ BONUS : ANALYSES / RAPPORT / SUPPORT ============ -->
+<section>
+  <div class="wrap bonus">
+    <div class="bonus-carte">
+      <h2 class="titre-section"><span data-cfg="programme"></span> : les analyses par e-mail</h2>
+      <p>Tu as toujours rêvé de voir les vrais trades d'un trader professionnel, en temps réel ?</p>
+      <p>C'est exactement le principe : <span class="gras">2 à 5 fois par semaine</span>, je t'envoie par e-mail les trades que je prévois de prendre, basés sur les stratégies du cours, avec mon entrée, mon stop et mon objectif.</p>
+      <div class="a-remplir image">Exemple réel : capture d'un e-mail d'analyse + capture du résultat</div>
+      <div class="avert">Ces e-mails ne sont pas des signaux ni des conseils en investissement. Ils servent à te montrer comment j'applique les stratégies du cours sur les marchés réels. Tous les trades ne sont pas gagnants.</div>
+    </div>
+    <div class="bonus-carte">
+      <h2 class="titre-section"><span data-cfg="programme"></span> : le rapport pro du lundi</h2>
+      <p>Chaque lundi, tu reçois un e-mail avec les zones de support et de résistance que je surveille pour la semaine. Tu es ainsi aussi bien préparé que moi pour les opportunités à venir.</p>
+      <div class="a-remplir image">Exemple réel : capture d'un rapport + capture de la réaction du prix</div>
+    </div>
+    <div class="bonus-carte">
+      <h2 class="titre-section"><span data-cfg="programme"></span> : le support prioritaire par e-mail</h2>
+      <p><span data-cfg="programme"></span> est bien plus qu'une formation : c'est un vrai programme de mentorat.</p>
+      <p>Tu as accès à moi personnellement par e-mail. Pose-moi toutes tes questions sur le trading et je t'accompagne à chaque étape de la construction de ton plan de trading rentable.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GARANTIE ============ -->
+<section class="fond-gris">
+  <div class="wrap">
+    <h2 class="titre-section">Bonus final : la garantie satisfait ou remboursé 30 jours</h2>
+    <div class="garantie">
+      <div class="badge-garantie"><div><strong>30</strong>JOURS<br>GARANTIS</div></div>
+      <p>La règle est très simple : si tu n'es pas satisfait pour <span class="gras">n'importe quelle raison</span> dans les 30 premiers jours, envoie-nous un e-mail et tu es remboursé, sans aucune question.</p>
+      <p>Soyons clairs : je ne peux évidemment pas te garantir que tu deviendras millionnaire. Certains se feront un complément de revenu. D'autres achèteront la formation sans jamais l'appliquer, et leur trading ne progressera pas.</p>
+      <p>C'est pour ça que je propose cette garantie 100 % sans justification.</p>
+      <p class="maj">Si pour une raison quelconque tu n'es pas satisfait dans les 30 premiers jours, écris-nous à <a data-cfg-mail></a>.</p>
+      <p>On te rembourse rapidement l'intégralité du prix, sans prise de tête.</p>
+    </div>
+    <h3 class="centre" style="margin-top:36px">Une offre sans risque</h3>
+    <p>Concrètement, tu peux faire le prochain pas vers ta liberté financière sans rien risquer. Je ne peux pas te le rendre plus simple.</p>
+    <p>Si tu n'es pas prêt à saisir une offre sans risque pour apprendre une compétence qui peut transformer ton avenir financier… c'est peut-être que tu n'en as pas assez envie. Mais si tu lis encore, je sais que ce n'est pas ton cas.</p>
+    <p>Alors, si tu es prêt à tester pendant 30 jours sans risque la méthode exacte qui m'a fait passer de <span class="gras">[ton ancien métier]</span> à trader professionnel, choisis l'une des options de paiement ci-dessous.</p>
+    <p class="gras">J'ai hâte de t'accompagner vers tes objectifs de trading !</p>
+  </div>
+</section>
+
+<!-- ============ OFFRE (1) ============ -->
+<section class="fond-noir" id="offre">
+  <div class="wrap">
+    <h2 class="titre-section" style="color:#fff">L'offre du jour (options de paiement)</h2>
+    <div class="offres" data-offres></div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section>
+  <div class="wrap faq">
+    <h2 class="titre-section">Questions fréquentes (FAQ)</h2>
+    <details><summary>1. La formation convient-elle aux débutants ?</summary><p>Oui. Elle est construite du début à la fin pour t'emmener pas à pas de zéro connaissance jusqu'à un niveau de trader professionnel.</p></details>
+    <details><summary>2. Est-ce que ça marchera si j'ai déjà suivi d'autres formations ?</summary><p>Oui. Beaucoup de nos élèves arrivent après d'autres formations et ont pu redresser complètement leur trading grâce à ce qu'ils ont appris ici.</p></details>
+    <details><summary>3. Combien de temps dure la formation ?</summary><p>Chacun avance à son rythme, donc difficile de donner une durée exacte. Il y a environ <span class="gras">[X] heures</span> de vidéos ; selon le temps que tu y consacres, la plupart des élèves la terminent en 2 à 6 mois.</p></details>
+    <details><summary>4. Comment me faire rembourser (si je le souhaite) ?</summary><p>C'est très simple : envoie un e-mail à <a data-cfg-mail></a> dans les 30 premiers jours et on traite ton remboursement immédiatement, sans poser de questions.</p></details>
+    <details><summary>5. Comment j'accède au contenu ?</summary><p>Tout le contenu est dans un espace membre auquel tu as accès immédiatement après ton achat. Les vidéos sont préenregistrées : tu apprends à ton rythme, quand tu veux.</p></details>
+    <details><summary>6. C'est quoi, les analyses par e-mail ?</summary><p>Ce sont les trades que je prends, basés sur les stratégies du cours, que je t'envoie pour que tu voies en temps réel comment je les applique.</p></details>
+    <details><summary>7. Les stratégies fonctionnent-elles seulement sur le Forex ?</summary><p>Non, les stratégies et techniques s'appliquent à tous les marchés : actions, indices, crypto…</p></details>
+    <details><summary>8. Qui sera mon mentor et répondra à mes questions ?</summary><p>Ce sera moi, <span data-cfg="mentor"></span>. Je réponds personnellement à chaque e-mail lié au trading, pour t'accompagner tout au long du parcours.</p></details>
+    <details><summary>9. La formation aborde-t-elle la psychologie du trading ?</summary><p>Oui, largement, tout comme la gestion du risque. Ce sont deux des piliers les plus importants du trading, ils ne sont donc jamais survolés.</p></details>
+    <details><summary>10. Y a-t-il des prérequis ?</summary><p>Aucune connaissance préalable n'est nécessaire. Il te faut juste une connexion internet et un ordinateur.</p></details>
+    <p class="centre" style="margin-top:20px">Une autre question ? Écris-nous à <a data-cfg-mail></a>.</p>
+  </div>
+</section>
+
+<!-- ============ PROBLÈMES ============ -->
+<section class="fond-gris">
+  <div class="wrap">
+    <p class="centre gras">Je sais que c'est une grosse décision. Si tu hésites encore, continue ta lecture et découvre d'autres commentaires d'élèves partis du même point que toi.</p>
+    <h2 class="titre-section">Encore plus de commentaires d'élèves</h2>
+    <div class="grille-temoignages">
+      <div class="a-remplir image">Capture témoignage 4</div>
+      <div class="a-remplir image">Capture témoignage 5</div>
+      <div class="a-remplir image">Capture témoignage 6</div>
+    </div>
+    <div class="avert">Les résultats peuvent varier et les témoignages ne prétendent pas représenter des résultats typiques.</div>
+    <p style="margin-top:24px">Chaque commentaire de cette page vient de traders comme toi qui étaient…</p>
+    <ul class="problemes">
+      <li>Soit complètement débutants, sans direction pour trader correctement ;</li>
+      <li>Soit en train d'utiliser des stratégies qui ne rapportaient rien ;</li>
+      <li>En difficulté pour contrôler leur risque, perdant plus que prévu ;</li>
+      <li>En train de changer de stratégie sans arrêt et d'enchaîner les pertes ;</li>
+      <li>Toujours stressés et émotifs pendant leurs trades ;</li>
+      <li>En train de choisir les mauvais supports et résistances ;</li>
+      <li>Irréguliers, sans stratégie basée sur des règles ;</li>
+      <li>En train d'entrer en position pour de mauvaises raisons ;</li>
+      <li>Bloqués dans leur passage au trading professionnel.</li>
+    </ul>
+    <p>Et ce n'en sont que quelques-uns. Si tu rencontres l'un de ces problèmes, ou n'importe quelle autre difficulté de trading, on a déjà aidé des traders à résoudre exactement les mêmes. Et on peut t'aider aussi.</p>
+  </div>
+</section>
+
+<!-- ============ LE SECRET ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="titre-section">J'ai une question pour toi…</h2>
+    <p class="centre gras" style="font-size:1.15rem">Comment des traders débutants ou en difficulté, comme toi, ont-ils résolu ces problèmes et transformé leur trading ?</p>
+    <p>Tu veux la réponse simple ? Ils ont appris exactement ce que je vais t'enseigner. Et pour être honnête, ce n'est pas de ta faute.</p>
+    <p>La plupart des traders (moi compris) commencent en pensant qu'il suffit de trouver LA stratégie secrète des pros. Une stratégie rentable compte, bien sûr. Mais ce n'est qu'un ingrédient de la recette.</p>
+    <p class="centre gras" style="font-size:1.3rem;color:var(--rouge)">La stratégie n'est PAS le secret.</p>
+    <div class="a-remplir">Ton expérience : combien de temps tu as perdu de l'argent en testant des stratégies trouvées sur YouTube, combien tu en connaissais, et ce que tu as compris ensuite.</div>
+    <p>Jusqu'au jour où j'ai trouvé la recette complète. Tu veux le secret ? Je l'appelle la <span class="gras" data-cfg="methode"></span>.</p>
+    <h3 class="centre">La <span data-cfg="methode"></span> dévoilée…</h3>
+    <div class="a-remplir image">Schéma de ta méthode (même un croquis à la main, ça marche très bien)</div>
+    <p><span data-cfg="programme"></span> a été construite dans un seul but : t'enseigner chaque détail de la <span data-cfg="methode"></span>, et comment l'utiliser pour trader avec régularité.</p>
+  </div>
+</section>
+
+<!-- ============ DEUX CHOIX ============ -->
+<section class="fond-gris">
+  <div class="wrap">
+    <h2 class="titre-section">Tu as deux choix</h2>
+    <p>Si tu n'es pas encore sûr, aucun souci, c'est normal d'être un peu sceptique. Les élèves dont tu as vu les commentaires hésitaient aussi. Ils ont décidé de franchir le pas et d'investir dans leur avenir. Ils avaient les deux mêmes choix que toi aujourd'hui :</p>
+    <div class="choix">
+      <div class="c1"><h3>Choix n° 1 : passer ton tour</h3><p>Continuer à trader seul, sans accompagnement. Peut-être que tu finiras par devenir rentable… mais après combien de comptes cramés et combien de temps perdu ?</p></div>
+      <div class="c2"><h3>Choix n° 2 : profiter de cette offre garantie</h3><p>Apprendre le trading et appliquer les stratégies et techniques qui m'ont permis d'atteindre mes objectifs, et qui ont aidé de nombreux traders à faire de même.</p></div>
+    </div>
+    <p>Dans le pire des cas avec le choix n° 2, la formation ne te plaît pas : tu es remboursé intégralement. Aucun dégât.</p>
+    <p>Dans le meilleur des cas, tu apprends une compétence qui peut changer ton avenir financier pour toujours.</p>
+    <p class="gras">Plutôt bon ratio risque / rendement, non ?</p>
+    <p class="centre gras" style="text-transform:uppercase">Si tu es d'accord, choisis une option de paiement ci-dessous et commençons ton parcours vers le trading professionnel !</p>
+  </div>
+</section>
+
+<!-- ============ OFFRE (2) ============ -->
+<section class="fond-noir">
+  <div class="wrap">
+    <h2 class="titre-section" style="color:#fff">L'offre du jour (options de paiement)</h2>
+    <div class="offres" data-offres data-compact></div>
+  </div>
+</section>
+
+<!-- ============ GARANTIE (rappel) + CTA FINAUX ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="titre-section">Offre sans risque</h2>
+    <div class="garantie">
+      <div class="badge-garantie"><div><strong>30</strong>JOURS<br>GARANTIS</div></div>
+      <h3>30 jours : tu adores, ou tu es remboursé !</h3>
+      <p><span data-cfg="programme"></span> fait partie des rares formations Forex en ligne avec une garantie <span class="gras">100 % satisfait ou remboursé</span>.</p>
+      <p>Si tu fais l'effort d'apprendre et d'appliquer le contenu, on est tellement confiants que tu verras des résultats que, si tu n'es pas satisfait dans les 30 premiers jours, on te rembourse 100 % du prix.</p>
+    </div>
+    <a class="cta" href="#offre">Je réserve ma place dans <span data-cfg="programme"></span></a>
+
+    <h2 class="titre-section" style="margin-top:56px">Des centaines de commentaires d'élèves</h2>
+    <div class="grille-temoignages">
+      <div class="a-remplir image">Capture témoignage 7</div>
+      <div class="a-remplir image">Capture témoignage 8</div>
+      <div class="a-remplir image">Capture témoignage 9</div>
+    </div>
+    <p class="alerte">Attention : places limitées. Clique ci-dessous pour réserver la tienne !</p>
+    <a class="cta" href="#offre">Je rejoins <span data-cfg="programme"></span></a>
+
+    <h2 class="titre-section" style="margin-top:56px">Témoignage vidéo</h2>
+    <div class="a-remplir image">Vidéo témoignage d'un élève (titre : « Prénom : “J'ai suivi la formation et je suis devenu rentable” »)</div>
+    <div class="a-remplir">Ton texte sur cet élève : ce qu'il a utilisé (formation + support), et ce que ça montre.</div>
+
+    <p style="margin-top:28px">Si tu hésites encore après tous ces résultats, je comprends. Acheter en ligne peut faire peur. C'est pour ça qu'on a une politique de remboursement <span class="gras">100 % sans risque</span>.</p>
+    <div class="garantie">
+      <div class="badge-garantie"><div><strong>30</strong>JOURS<br>GARANTIS</div></div>
+      <p>Si tu n'es pas satisfait pour n'importe quelle raison dans les 30 premiers jours, un simple e-mail suffit pour être remboursé, sans aucune question.</p>
+    </div>
+    <a class="cta" href="#offre">Je rejoins <span data-cfg="programme"></span></a>
+    <p class="centre gras" style="margin-top:18px">** Accès immédiat à l'intégralité de <span data-cfg="programme"></span>, et bien plus **</p>
+
+    <div class="signature" style="margin-top:36px">
+      <p>On se retrouve à l'intérieur,<br><span data-cfg="mentor"></span><br><span class="petit">(trader professionnel / coach en trading)</span><br><span data-cfg="marque"></span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PIED DE PAGE ============ -->
+<footer>
+  <div class="wrap">
+    <h4>*Avertissement sur les risques</h4>
+    <p>Le trading sur le Forex et les CFD est hautement spéculatif : les cours peuvent devenir extrêmement volatils et tu peux perdre la totalité des fonds investis. Ces produits comportent un niveau de risque élevé et peuvent ne pas convenir à tous les investisseurs. N'investis jamais de l'argent que tu ne peux pas te permettre de perdre et consulte un professionnel agréé avant toute décision d'investissement. Aucune déclaration n'est faite quant au fait qu'un compte réalisera, ou est susceptible de réaliser, des profits ou des pertes. Les performances passées ne préjugent pas des performances futures. Les résultats individuels varient. Tu reconnais qu'aucune promesse ni garantie de réussite ou de rentabilité ne t'a été faite par <span data-cfg="marque"></span>. Cette formation est un contenu éducatif et ne constitue pas un conseil en investissement.</p>
+    <div class="a-remplir" style="color:#6b4e00">Adapte cet avertissement à ton pays (France : règles AMF sur la promotion du trading ; Belgique : FSMA ; Suisse : FINMA, etc.) et ajoute tes mentions légales.</div>
+    <h4>*Résultats hypothétiques ou simulés</h4>
+    <p>Les résultats hypothétiques ou simulés présentent certaines limites. Contrairement à un historique réel, ils ne représentent pas de véritables transactions et peuvent sous-estimer ou surestimer l'impact de certains facteurs de marché, comme le manque de liquidité. Ils sont également conçus avec le bénéfice du recul. Aucune déclaration n'est faite quant au fait qu'un compte réalisera des profits ou des pertes similaires.</p>
+    <div class="liens-legaux">
+      <a href="#">Avertissement complet</a>
+      <a href="#">Conditions générales</a>
+      <a href="#">Politique de confidentialité</a>
+      <a href="#">Politique d'annulation</a>
+      <a href="#">Politique de remboursement</a>
+    </div>
+    <p class="centre" style="margin-top:18px">© <span data-cfg="annee"></span> <span data-cfg="marque"></span>. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<!-- Remplissage automatique à partir de CONFIG -->
+<template id="tpl-offres">
+  <div class="offre top">
+    <span class="etiquette">Meilleure offre</span>
+    <h3>Paiement unique</h3>
+    <p class="prix-barre" data-prix="valeurTotale"></p>
+    <p class="prix">Seulement <span data-prix="prixUnique"></span></p>
+    <p class="sous-prix">Économise énormément avec un paiement unique</p>
+    <div data-details></div>
+    <p class="total">(Un seul paiement de <span data-prix="prixUnique"></span>)</p>
+    <a class="cta" data-lien="lienPaiementUnique">Je m'inscris maintenant</a>
+  </div>
+  <div class="offre alt">
+    <span class="etiquette">Le plus accessible</span>
+    <h3>Paiement en plusieurs fois</h3>
+    <p class="prix-barre" data-prix="valeurTotale"></p>
+    <p class="prix">Seulement <span data-prix="mensualite"></span> aujourd'hui</p>
+    <p class="sous-prix">Étale les paiements pour plus de souplesse</p>
+    <div data-details></div>
+    <p class="total">(<span data-cfg="nbMensualites"></span> paiements de <span data-prix="mensualite"></span>)</p>
+    <a class="cta" data-lien="lienPaiementPlusieurs">Je m'inscris maintenant</a>
+  </div>
+</template>
+<template id="tpl-details">
+  <ul>
+    <li><span>Formation complète</span><span>valeur 4 497 €</span></li>
+    <li><span>Analyses par e-mail</span><span>valeur 997 €</span></li>
+    <li><span>Rapport pro du lundi</span><span>valeur 497 €</span></li>
+    <li><span>Support prioritaire par e-mail</span><span>valeur 497 €</span></li>
+  </ul>
+  <p class="sous-titre">Bonus aujourd'hui seulement</p>
+  <ul>
+    <li><span>Le coffre-fort à stratégies</span><span>valeur 997 €</span></li>
+    <li><span>Formation trading discrétionnaire</span><span>valeur 997 €</span></li>
+    <li><span>Formation figures avancées</span><span>valeur 997 €</span></li>
+    <li><span>Garantie satisfait ou remboursé 30 jours</span><span>inestimable</span></li>
+  </ul>
+  <p class="total">Valeur totale : <span data-prix="valeurTotale"></span></p>
+</template>
+
+<script>
+  (function(){
+    const fmt = n => new Intl.NumberFormat("fr-FR").format(n) + " " + CONFIG.devise;
+
+    // Construit les deux blocs d'offre (le second en version compacte, sans le détail)
+    document.querySelectorAll("[data-offres]").forEach(box => {
+      box.appendChild(document.getElementById("tpl-offres").content.cloneNode(true));
+      if (!box.hasAttribute("data-compact")) {
+        box.querySelectorAll("[data-details]").forEach(d =>
+          d.appendChild(document.getElementById("tpl-details").content.cloneNode(true)));
+      }
+    });
+
+    document.querySelectorAll("[data-cfg]").forEach(el => { el.textContent = CONFIG[el.dataset.cfg]; });
+    document.querySelectorAll("[data-prix]").forEach(el => { el.textContent = fmt(CONFIG[el.dataset.prix]); });
+    document.querySelectorAll("[data-lien]").forEach(el => { el.href = CONFIG[el.dataset.lien]; });
+    document.querySelectorAll("[data-cfg-mail]").forEach(el => {
+      el.textContent = CONFIG.emailSupport;
+      el.href = "mailto:" + CONFIG.emailSupport;
+    });
+  })();
+</script>
+</body>
+</html>
